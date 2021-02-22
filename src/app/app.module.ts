@@ -7,13 +7,15 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routes';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './components/posts/posts/posts.component';
-import { PostsReducer} from './reducers/posts.reducer';
+import { PostsReducer } from './store/reducers/posts.reducer';
 import { AddPostComponent } from './components/posts/add-post/add-post.component';
 import { DeletePostComponent } from './components/posts/delete-post/delete-post.component';
-import { PostEffects } from './effects/post.effects'; 
+import { PostEffects } from './store/effects/post.effects';
+import { authReducer } from './store/reducers/auth.reducer';
+import { metaReducers } from 'src/app/store/_config';
 
 
 @NgModule({
@@ -28,9 +30,7 @@ import { PostEffects } from './effects/post.effects';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    StoreModule.forRoot({
-      post: PostsReducer
-    }, {}),
+    StoreModule.forRoot({   post: PostsReducer, auth: authReducer }, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     EffectsModule.forRoot([
       PostEffects

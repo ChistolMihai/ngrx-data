@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import AppState from './models/app-state.model';
+import AppState from './store/models/app-state.model';
 
 @Component({
   selector: 'app-root',

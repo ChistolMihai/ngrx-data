@@ -8,7 +8,7 @@ export interface PostState {
 }
 
 const initialState: PostState = {
-    posts: 
+    posts:
         [
             {
                 id: 1,
@@ -55,7 +55,7 @@ export function PostsReducer(state: PostState = initialState, action: PostAction
         }
     case PostActionTypes.DELETE_POST_SUCCESS:{
         let updatedPosts = [...state.posts];
-        updatedPosts.splice(action.payload, 1);   
+        updatedPosts.splice(action.payload, 1);
         return {
             ...state,
             posts: updatedPosts,
@@ -75,17 +75,17 @@ export function PostsReducer(state: PostState = initialState, action: PostAction
         }
     case PostActionTypes.GET_POSTS_SUCCESS:
         return {
-            ...state, 
+            ...state,
             posts: action.payload,
             loading: false
         }
     case PostActionTypes.GET_POSTS_FAIL:
         return {
-            ...state, 
+            ...state,
             error: action.payload,
             loading: false
         }
-    default: 
+    default:
         return state;
- }   
+ }
 }

@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import Post from '../../../models/post.model';
-import AppState from '../../../models/app-state.model';
-import { GetPostsAction } from '../../../actions/posts.actions';
+import Post from '../../../store/models/post.model';
+import AppState from '../../../store/models/app-state.model';
+import { GetPostsAction } from '../../../store/actions/posts.actions';
 
 @Component({
   selector: 'app-posts',

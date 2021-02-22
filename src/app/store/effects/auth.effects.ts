@@ -15,7 +15,7 @@ import {
   AddPostSuccessAction,
   AddPostFailAction
 } from '../actions/posts.actions'
-import { PostsService } from '../services/posts.service';
+import { PostsService } from '../../_shared/services/posts.service';
 
 @Injectable()
 export class PostEffects {

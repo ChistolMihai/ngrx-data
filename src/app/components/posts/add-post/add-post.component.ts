@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngrx/store';
-import { AddPostAction } from 'src/app/actions/posts.actions';
+import { AddPostAction } from 'src/app/store/actions/posts.actions';
 
-import AppState from 'src/app/models/app-state.model';
-import Post from 'src/app/models/post.model';
+import AppState from 'src/app/store/models/app-state.model';
+import Post from 'src/app/store/models/post.model';
 
 @Component({
   selector: 'app-add-post',

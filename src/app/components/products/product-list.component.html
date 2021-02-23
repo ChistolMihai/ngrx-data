@@ -1,0 +1,6 @@
+<ng-container *ngIf="loading$ | async; else elseTemplate">
+    Loading
+</ng-container>
+<ng-template #elseTemplate>
+    {{ productList$ | async | json }}
+</ng-template>

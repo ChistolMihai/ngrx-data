@@ -4,6 +4,7 @@ import { UserActions } from './user.actions';
 import { User } from './user.model';
 
 export interface UserState extends EntityState<User> {}
+
 const adapter = createEntityAdapter<User>();
 
 export const initialUserState: UserState = adapter.getInitialState();

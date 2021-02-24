@@ -18,18 +18,19 @@ import {
   defaultDataServiceConfig
 } from './store';
 import { FormsModule } from '@angular/forms';
-import { CounterComponent } from './counter/counter.component';
 import { UsersComponent } from './users/users.component';
 import { CommentComponent } from './comment/comment.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { GithubComponent } from './github/github.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CounterComponent,
     UsersComponent,
     PostsComponent,
-    CommentComponent],
+    CommentComponent,
+    GithubComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,5 +47,5 @@ import { PostsComponent } from './components/posts/posts.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor() {}
+  constructor() { }
 }

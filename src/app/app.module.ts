@@ -13,17 +13,13 @@ import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 import { defaultDataServiceConfig, effects, entityConfig, metaReducers, reducers } from 'src/app/store/_config';
 
 import { FormsModule } from '@angular/forms';
-import { PostsComponent } from './components/posts/posts.component';
-import { GithubComponent } from './github/github.component';
 import { AppComponent } from './app/app.component';
-import { UsersComponent } from './users/users.component';
+import { UsersComponent } from './main/users/users.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UsersComponent,
-    PostsComponent,
-    GithubComponent
+    UsersComponent
   ],
   imports: [
     BrowserModule,

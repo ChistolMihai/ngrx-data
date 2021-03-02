@@ -1,5 +1,5 @@
-import { Post } from './../models/post.model';
-import { PostsDataService } from '../store/entity/posts-data.service';
+import { Post } from '../../shared/models/post.model';
+import { PostsDataService } from '../../store/entity/posts-data.service';
 import {
   EntityDefinitionService,
   EntityMetadataMap,

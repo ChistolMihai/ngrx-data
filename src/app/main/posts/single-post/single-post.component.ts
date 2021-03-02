@@ -1,5 +1,5 @@
-import { Post } from './../../models/post.model';
-import { PostService } from '../../shared/post.service';
+import { Post } from '../../../shared/models/post.model';
+import { PostService } from '../../../shared/post.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 

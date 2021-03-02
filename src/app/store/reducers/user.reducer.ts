@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { EntityState, createEntityAdapter } from '@ngrx/entity';
 import { UserActions } from '../actions/user.actions';
-import { User } from '../../models/user.model';
+import { User } from '../../shared/models/user.model';
 
 export interface UserState extends EntityState<User> {}
 

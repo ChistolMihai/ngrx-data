@@ -2,9 +2,7 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { UsersComponent } from './users/users.component';
-import { PostsComponent } from './components/posts/posts.component';
-import { GithubComponent } from './github/github.component';
+import { UsersComponent } from './main/users/users.component';
 
 
 const routes: Routes = [
@@ -12,11 +10,9 @@ const routes: Routes = [
   {
     path: 'posts',
     loadChildren: () =>
-      import('./posts/posts.module').then((m) => m.PostsModule),
+      import('./main/posts/posts.module').then((m) => m.PostsModule),
   },
-  { path: 'users', component: UsersComponent },
-  { path: 'post', component: PostsComponent },
-  { path: 'github', component: GithubComponent }
+  { path: 'users', component: UsersComponent }
 ];
 
 @NgModule({

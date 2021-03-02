@@ -1,4 +1,4 @@
-import { PhotoActions, PhotoActionTypes } from './photo.actions';
+import { PhotoActions, PhotoActionTypes } from '../actions/photo.actions';
 
 export interface PhotoState {
   photos: any[];

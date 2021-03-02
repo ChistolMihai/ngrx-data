@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class AddPostComponent implements OnInit {
   addPostForm: FormGroup;
-  constructor(private postService: PostService, private router: Router) {}
+  constructor(
+    private postService: PostService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.addPostForm = new FormGroup({

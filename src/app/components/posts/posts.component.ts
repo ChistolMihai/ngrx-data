@@ -1,7 +1,7 @@
-import { PostService } from './../../store/post/post.service';
+import { PostService } from '../../shared/services/post.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Post } from '../../store/post/post.model';
+import { Post } from '../../shared/services/models/post.model';
 
 @Component({
   selector: 'app-posts',

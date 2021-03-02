@@ -1,8 +1,9 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { AppState } from '../store';
 import { Store, select } from '@ngrx/store';
-import { UserActions, getUsers } from '../store/user';
+import { UserActions } from '../store/actions/user.actions';
+import { getUsers } from '../store/selectors/user.selectors';
+import { AppState } from '../store/_config';
 
 @Component({
   selector: 'app-users',

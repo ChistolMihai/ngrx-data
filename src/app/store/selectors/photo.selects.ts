@@ -1,4 +1,4 @@
-import { PhotoState } from './photo.reducer';
+import { PhotoState } from '../reducers/photo.reducer';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 const getPhotoFeature = createFeatureSelector('photo');

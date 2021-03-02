@@ -1,5 +1,5 @@
 import { createAction, union, props } from '@ngrx/store';
-import { User } from './user.model';
+import { User } from '../../models/user.model';
 
 const namespace = '[UserActions]';
 export const UserActions = {

@@ -10,7 +10,7 @@ const config: DefaultDataServiceConfig = {
 @Injectable({
   providedIn: 'root'
 })
-export class GithubService extends DefaultDataService<any> {
+export class GithubDataService extends DefaultDataService<any> {
 
   constructor(
     protected http: HttpClient,

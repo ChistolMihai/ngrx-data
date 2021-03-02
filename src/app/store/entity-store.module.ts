@@ -1,21 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EntityDataService } from '@ngrx/data';
-import { CommentService } from './comment/comment.service';
-import { GithubService } from './github/github.service';
+import { GithubDataService } from './entity/github-data.service';
 
 @NgModule({
   declarations: [],
-  providers: [CommentService, GithubService],
+  providers: [GithubDataService],
   imports: [CommonModule]
 })
 export class EntityStoreModule {
   constructor(
     entityDataService: EntityDataService,
-    commentService: CommentService,
-    githubService: GithubService
+    GithubDataService: GithubDataService
   ) {
-    entityDataService.registerService('Comment', commentService);
-    entityDataService.registerService('Github', githubService);
+    entityDataService.registerService('Github', GithubDataService);
   }
 }

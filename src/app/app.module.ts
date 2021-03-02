@@ -10,16 +10,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EffectsModule } from '@ngrx/effects';
 import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
-import {
-  effects,
-  entityConfig,
-  metaReducers,
-  reducers,
-  defaultDataServiceConfig
-} from './store';
+
+import { defaultDataServiceConfig, effects, entityConfig, metaReducers, reducers } from 'src/app/store/_config';
+
 import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
-import { CommentComponent } from './comment/comment.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { GithubComponent } from './github/github.component';
 @NgModule({
@@ -28,7 +23,6 @@ import { GithubComponent } from './github/github.component';
     HomeComponent,
     UsersComponent,
     PostsComponent,
-    CommentComponent,
     GithubComponent
   ],
   imports: [
@@ -39,7 +33,7 @@ import { GithubComponent } from './github/github.component';
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),
     EntityDataModule.forRoot(entityConfig),
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [
     { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig }

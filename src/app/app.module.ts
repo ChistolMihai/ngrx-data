@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EffectsModule } from '@ngrx/effects';
 import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
@@ -14,9 +13,10 @@ import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 import { defaultDataServiceConfig, effects, entityConfig, metaReducers, reducers } from 'src/app/store/_config';
 
 import { FormsModule } from '@angular/forms';
-import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { GithubComponent } from './github/github.component';
+import { AppComponent } from './app/app.component';
+import { UsersComponent } from './users/users.component';
 @NgModule({
   declarations: [
     AppComponent,

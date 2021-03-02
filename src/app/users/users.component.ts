@@ -1,6 +1,6 @@
-import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { UserActions } from '../store/actions/user.actions';
 import { getUsers } from '../store/selectors/user.selectors';
 import { AppState } from '../store/_config';

@@ -1,5 +1,5 @@
 import { Post } from './../models/post.model';
-import { PostsDataService } from './posts-data.service';
+import { PostsDataService } from '../store/entity/posts-data.service';
 import {
   EntityDefinitionService,
   EntityMetadataMap,
@@ -65,7 +65,6 @@ export class PostsModule {
     PostsDataService: PostsDataService
   ) {
     eds.registerMetadataMap(entityMetadata);
-
     entityDataService.registerService('Post', PostsDataService);
   }
 }

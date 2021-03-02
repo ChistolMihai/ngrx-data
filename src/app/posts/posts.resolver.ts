@@ -1,5 +1,5 @@
 import { mergeMap, map, first, tap } from 'rxjs/operators';
-import { PostService } from './post.service';
+import { PostService } from '../shared/post.service';
 import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
